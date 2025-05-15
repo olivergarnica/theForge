@@ -1,0 +1,38 @@
+back-tester
+class BackTester:
+  constructor:
+    - data: n-dimensional data
+    - time_axis: time series time
+    - asset_axis: treat independently in operations
+    - prices: price data of each stock, my align with asset axis
+    - start_date: start date for data
+    - end_ate: end date for data (optional default today)
+    - portfolio: pd.DataFrame
+    - stoploss: float
+    - **kwargs
+
+
+  * allows user to user member variables of the class.
+  requires: user must call trade(data) in this function,
+            which will pass data to buy() and sell().
+  returns: returns per stock of this interval
+  def x(self)
+
+
+  * will be called in trade when looking for long opportunities
+  returns: bool
+  def enter(data) -> bool
+
+
+  * will be called in trade when looking to for short opportunities
+  returns bool.
+  def exit(data) -> bool
+
+
+  def trade(data, min_hold_dur: int):
+    - executes enter and exit all stocks
+    - updates portfolio values based on trade opportunities
+
+
+  * for each interval in the range, call x()
+  def backtest(self, start_date, end_date):
