@@ -18,6 +18,7 @@ class StrategyModule:
         self.end_time = end_time
 
         for key, val in kwargs.items():
-            setattr(self, key, val);
+            setattr(self, key, val)
 
     def x():
+        pass
