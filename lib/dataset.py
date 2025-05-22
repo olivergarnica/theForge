@@ -14,7 +14,7 @@ class Dataset:
     self.data = data
     self.time_idx = time_idx
 
-    self.is_multi_index = asset_idx is not None;
+    self.is_multi_index = asset_idx is not None
     if (self.is_multi_index):
       self.asset_idx = asset_idx
 
